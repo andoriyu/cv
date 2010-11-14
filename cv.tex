@@ -9,7 +9,7 @@
 \documentclass[11pt,a4paper]{moderncv}
 
 % moderncv themes
-\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[orange]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 %\moderncvtheme[green]{classic}                % idem
 
 % character encoding
@@ -19,21 +19,21 @@
 \usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
 % personal data
-\firstname{John}
-\familyname{Doe}
-\title{Resumé title (optional)}               % optional, remove the line if not wanted
-\address{street and number}{postcode city}    % optional, remove the line if not wanted
-\mobile{mobile (optional)}                    % optional, remove the line if not wanted
-\phone{phone (optional)}                      % optional, remove the line if not wanted
-\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{email (optional)}                      % optional, remove the line if not wanted
-\homepage{homepage (optional)}                % optional, remove the line if not wanted
-\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+\firstname{Serge}
+\familyname{Ziryukin}
+%\title{Resumé title (optional)}               % optional, remove the line if not wanted
+%\address{Parnikovaya, 11/63}{220000}    % optional, remove the line if not wanted
+\mobile{+37529-1822764}                    % optional, remove the line if not wanted
+%\phone{phone (optional)}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{ftrvxmtrx@gmail.com}                   % optional, remove the line if not wanted
+\homepage{github.com/ftrvxmtrx}        % optional, remove the line if not wanted
+\extrainfo{jabber: ftrvxmtrx@gmail.com} % optional, remove the line if not wanted
 \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
@@ -52,13 +52,13 @@
 \maketitle
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2003--2008}{B.S.}{Belarusian State University of Informatics and Radioelectronics}{Minsk}{\textit{Computers, Systems and Networks}}{}  % arguments 3 to 6 can be left empty
 
-\section{Master thesis}
-\cvline{title}{\emph{Title}}
-\cvline{supervisors}{Supervisors}
-\cvline{description}{\small Short thesis abstract}
+\section{BS thesis}
+\cvline{title}{\emph{Microkernel operating system based on L4 specification.}}
+\cvline{supervisors}{Glecevich I.I.}
+\cvline{description}{\small Two main types of kernels (monolithic and ${\mu}$) are described and compared, showing ${\mu}$-kernel drawbacks and benefits.
+  L4-based ${\mu}$-kernel implementation for x86 and MIPS is provided, its loading/execution process and APIs are described.}
 
 \section{Experience}
 \subsection{Vocational}
@@ -80,49 +80,30 @@ Detailed achievements:%
 \item Achievement 3.
 \end{itemize}}
 \cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+
 \subsection{Miscellaneous}
 \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
 \section{Languages}
-\cvlanguage{Language 1}{Skill level}{Comment}
-\cvlanguage{Language 2}{Skill level}{Comment}
-\cvlanguage{Language 3}{Skill level}{Comment}
+\cvlanguage{Belarusian}{Basic}{}
+\cvlanguage{Russian}{Excellent}{}
+\cvlanguage{English}{Intermediate+}{}
 
-\section{Computer skills}
-\cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\section{Most used tools for development}
+\cvcomputer{Languages}{C, OCaml, Shell, C++, ObjC, Lua}{}{}
+\cvcomputer{Op. systems}{Arch Linux, FreeBSD, Mac OS X}{}{}
+\cvcomputer{Documentation}{Doxygen, ocamldoc, \LaTeX}{}{}
+\cvcomputer{Build systems}{CMake, GNU Make, qmake}{}{}
+\cvcomputer{SCM}{Git, Mercurial, SVN}{}{}
+\cvcomputer{IDE}{Emacs, XCode}{}{}
+\cvcomputer{WM}{xmonad}{}{}
 
 \section{Interests}
-\cvline{hobby 1}{\small Description}
-\cvline{hobby 2}{\small Description}
-\cvline{hobby 3}{\small Description}
-
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem[+]{Item 3}            % optional other symbol
-
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5 \cite{book1}}
-\cvlistdoubleitem{Item 3}{}
-
-% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}       % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+\cvline{Programming}{\small \url{http://github.com/ftrvxmtrx} \newline \url{http://ohloh.net/accounts/ftrvxmtrx}}
+\cvline{Problems}{\small \url{http://projecteuler.net/profile/ftrvxmtrx.png} \newline \url{http://spoj.pl/users/ftrvxmtrx}}
+\cvline{Photography}{\small \url{http://picasaweb.google.com/ftrvxmtrx}}
+\cvline{Music}{\small \url{http://last.fm/user/i515i}}
+\cvline{Games}{\small Quake I/II/III, UT99, Scrabble, Warcraft II, etc}
 
 \end{document}
 
