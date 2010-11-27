@@ -6,4 +6,4 @@ cv.pdf: cv.tex
 	pdflatex $^
 
 clean:
-	rm -f *.pdf *.out *.aux *.log *~
+	rm -f *.out *.aux *.log *~
