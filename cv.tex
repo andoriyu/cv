@@ -9,8 +9,8 @@
 \documentclass[11pt,a4paper]{moderncv}
 
 % moderncv themes
-\moderncvtheme[orange]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{classic}                % idem
+%\moderncvtheme[orange]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[orange]{classic}                % idem
 
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
@@ -31,7 +31,7 @@
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{ftrvxmtrx@gmail.com}                   % optional, remove the line if not wanted
 \homepage{github.com/ftrvxmtrx}        % optional, remove the line if not wanted
-\extrainfo{jabber: ftrvxmtrx@gmail.com} % optional, remove the line if not wanted
+%\extrainfo{jabber: ftrvxmtrx@gmail.com} % optional, remove the line if not wanted
 \photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 %\quote{Some quote (optional)}                 % optional, remove the line if not wanted
 
@@ -51,44 +51,6 @@
 \begin{document}
 \maketitle
 
-\section{Education}
-\cventry{2003--2008}{B.S.}{Belarusian State University of Informatics and Radioelectronics}{Minsk}{\textit{Computers, Systems and Networks}}{}  % arguments 3 to 6 can be left empty
-
-\section{BS thesis}
-\cvline{title}{\emph{Microkernel operating system based on L4 specification.}}
-\cvline{supervisors}{Glecevich I.I.}
-\cvline{description}{\small Two main types of kernels (monolithic and ${\mu}$) are described and compared, showing ${\mu}$-kernel drawbacks and benefits.
-  L4-based ${\mu}$-kernel implementation for x86 and MIPS is provided, its loading/execution process and APIs are described.}
-
-\section{Experience}
-\subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
-
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
-
-\section{Languages}
-\cvlanguage{Belarusian}{Basic}{}
-\cvlanguage{Russian}{Excellent}{}
-\cvlanguage{English}{Intermediate+}{}
-
 \section{Most used tools for development}
 \cvcomputer{Languages}{C, OCaml, Shell, C++, ObjC, Lua}{}{}
 \cvcomputer{Op. systems}{Arch Linux, FreeBSD, Mac OS X}{}{}
@@ -97,6 +59,95 @@ Detailed achievements:%
 \cvcomputer{SCM}{Git, Mercurial, SVN}{}{}
 \cvcomputer{IDE}{Emacs, XCode}{}{}
 \cvcomputer{WM}{xmonad}{}{}
+
+\section{Languages}
+%\cvlanguage{Russian}{Excellent}{}
+\cvlanguage{English}{Intermediate+}{}
+
+\section{Experience}
+\subsection{Vocational}
+
+\cventry{2010--}{Software Engineer}{Synesis}{Minsk}{}{Middleware for NEC devboard.\newline{}%
+\begin{itemize}%
+\item In-kernel RTP/RTCP media support.
+\end{itemize}}
+\newline
+
+\cventry{2010}{Software Engineer}{Synesis}{Minsk}{}{Porting DVB-T software to NEC devboard.\newline{}%
+\begin{itemize}%
+\item Porting U-Boot to the devboard;
+\item Porting Linux to the devboard;
+\item Porting DVB-T software and platform-specific bugfixing;
+\item Minimizing and putting the whole firmware into 8Mb flash device;
+\item CMake build system.
+\end{itemize}}
+\newline
+
+\cventry{2008--2010}{Software Engineer}{Synesis}{Minsk}{}{iPhone game development.\newline{}%
+\begin{itemize}%
+\item Porting existing games to the iPhone platform.
+\end{itemize}}
+\newline
+
+\cventry{2008}{Software Engineer}{Synesis}{Minsk}{}{OpenGLES-based UI tech demo for Freescale i.MX31 PDK.\newline{}%
+\begin{itemize}%
+\item The tech demo.
+\end{itemize}}
+\newline
+
+\cventry{2008}{Software Engineer}{Synesis}{Minsk}{}{Porting previous project to Fujitsu board.\newline{}%
+\begin{itemize}%
+\item Cross-compiler toolchain;
+\item Providing a way to run and test the software;
+\item Adding Fujitsu board support to middleware.
+\end{itemize}}
+\newline
+
+\cventry{2008}{Software Engineer}{Synesis}{Minsk}{}{DVB-T set-top box cross-platform software for three different boards.\newline{}%
+\begin{itemize}%
+\item Cross-platform middleware API design and implementation;
+\item TI-DM64446 specific middleware implementation.
+\end{itemize}}
+\newline
+
+\cventry{2007--2008}{Software Engineer}{Synesis}{Minsk}{}{DVB-S set-top box (ST7109) software.\newline{}%
+\begin{itemize}%
+\item Tests in Python;
+\item Extending automatic testing framework;
+\item Bug fixing;
+\item Screens;
+\item Automatic software update functionality and tools.
+\end{itemize}}
+\newline
+
+\subsection{Miscellaneous}
+\cventry{2010--}{Sole developer}{}{}{}{QuakeC bytecode to native code library compiler.\newline \small\url{https://github.com/ftrvxmtrx/qc2lib}\newline}
+\cventry{2010--}{Sole developer}{}{}{}{Single cross-platform Quake I/II/III game engine.\newline \small\url{https://github.com/ftrvxmtrx/metaquake}\newline}
+\cventry{2010}{Sole developer}{}{}{}{Tool for finding unnecessary include directives.\newline \small\url{https://github.com/ftrvxmtrx/inclean}\newline}
+\cventry{2010}{Sole developer}{}{}{}{2D puzzle for Maemo-based Nokia N900.\newline \small\url{http://maemo.org/downloads/product/Maemo5/colorflood}\newline}
+\cventry{2009}{Sole developer}{}{}{}{Flac/Ape/Wavepack + cue sheet into tracks splitter.\newline \small\url{http://split2flac.googlecode.com}}\newline{}%
+\cventry{2009}{Sole developer}{}{}{}{Open-source 2D game engine.\newline \small\url{https://github.com/ftrvxmtrx/erszebet}\newline{}%
+\begin{itemize}%
+\item Lua for game code;
+\item Chipmunk for physics;
+\item Linux, FreeBSD, Mac OS X and iPhone support.
+\end{itemize}}
+\newline
+
+\cventry{2005--2006}{Sole developer}{}{}{}{Client-side QuakeC implementation for Darkplaces game engine.\newline}
+\newline
+\cventry{2005--2006}{Sole developer}{}{}{}{TomazQuake derived game engine with a lot of additional features.\newline}
+\newline
+\cventry{2004--2005}{Sole developer, mapper, modeller}{}{}{}{Quake UT-like game mod.\newline}
+
+\section{Education}
+\cventry{2003--2008}{B.S.}{Belarusian State University of Informatics and Radioelectronics}{Minsk}{\textit{Computers, Systems and Networks}}{}  % arguments 3 to 6 can be left empty
+
+\section{BS thesis}
+\cvline{title}{\emph{Microkernel operating system based on L4 specification.}}
+\cvline{supervisors}{Glecevich I.I.}
+\cvline{description}{\small Two main types of kernels (monolithic and ${\mu}$) are described and compared, showing ${\mu}$-kernel drawbacks and benefits.
+  L4-based ${\mu}$-kernel implementation for x86 and MIPS is provided, its loading/execution process and APIs are described.}
 
 \section{Interests}
 \cvline{Programming}{\small \url{http://github.com/ftrvxmtrx} \newline \url{http://ohloh.net/accounts/ftrvxmtrx}}
