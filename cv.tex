@@ -1,39 +1,33 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
 \documentclass[11pt,a4paper]{moderncv}
 
-% moderncv themes
-%\moderncvtheme[orange]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[orange]{classic}                % idem
+%moderncvthemes are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman'
+% (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[orange]{classic}
 
-% character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[utf8]{inputenc}
 
-% adjust the page margins
 \usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+% if you want to change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% only for the classic theme, if you want to change the width
+% of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
+
+% required when changes are made to page layout lengths
+\AtBeginDocument{\recomputelengths}
 
 % personal data
 \firstname{Serge}
 \familyname{Ziryukin}
-%\title{Resumé title (optional)}               % optional, remove the line if not wanted
-%\address{Parnikovaya, 11/63}{220000}    % optional, remove the line if not wanted
-\mobile{+37529-1822764}                    % optional, remove the line if not wanted
-%\phone{phone (optional)}                      % optional, remove the line if not wanted
-%\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{ftrvxmtrx@gmail.com}                   % optional, remove the line if not wanted
-\homepage{github.com/ftrvxmtrx}        % optional, remove the line if not wanted
-%\extrainfo{jabber: ftrvxmtrx@gmail.com} % optional, remove the line if not wanted
-\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+%\title{Resumé title (optional)}
+\mobile{+37529-1822764}
+%\phone{phone (optional)}
+%\fax{fax (optional)}
+\email{ftrvxmtrx@gmail.com}
+\homepage{github.com/ftrvxmtrx}
+\photo[64pt]{picture}
+%\quote{Some quote (optional)}
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
@@ -44,15 +38,14 @@
 %\usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
 
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+
 \begin{document}
 \maketitle
 
 \section{Education}
-\cventry{2003--2008}{B.S.}{Belarusian State University of Informatics and Radioelectronics}{Minsk}{\textit{Computers, Systems and Networks}}{}  % arguments 3 to 6 can be left empty
+\cventry{2003--2008}{B.S.}{Belarusian State University of Informatics and Radioelectronics}{Minsk}{\textit{Computers, Systems and Networks}}{}
 
 \section{BS thesis}
 \cvline{title}{\emph{Microkernel operating system based on L4 specification.}}
@@ -158,6 +151,3 @@
 \cvline{Games}{\small Quake I/II/III, UT99, Scrabble, Warcraft II, etc}
 
 \end{document}
-
-
-%% end of file `template_en.tex'.
