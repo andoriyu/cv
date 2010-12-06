@@ -27,7 +27,7 @@
 \email{ftrvxmtrx@gmail.com}
 \homepage{github.com/ftrvxmtrx}
 \photo[64pt]{picture}
-%\quote{Some quote (optional)}
+%\quote{}
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
@@ -53,8 +53,8 @@
 \cvline{description}{\small Two main types of kernels (monolithic and ${\mu}$) are described and compared, showing ${\mu}$-kernel drawbacks and benefits.
   L4-based ${\mu}$-kernel implementation for x86 and MIPS is provided, its loading/execution process and APIs are described.}
 
-\section{Most used tools for development}
-\cvcomputer{Languages}{C, OCaml, Shell, C++, ObjC, Lua}{}{}
+\section{Most used development tools}
+\cvcomputer{Languages}{C, OCaml, Shell, Python, C++, Lua}{}{}
 \cvcomputer{Op. systems}{Arch Linux, FreeBSD, Mac OS X}{}{}
 \cvcomputer{Documentation}{Doxygen, ocamldoc, \LaTeX}{}{}
 \cvcomputer{Build systems}{CMake, GNU Make, qmake}{}{}
@@ -64,14 +64,15 @@
 
 \section{Languages}
 %\cvlanguage{Russian}{Excellent}{}
-\cvlanguage{English}{Intermediate+}{}
+\cvlanguage{English}{Intermediate}{}
 
 \section{Experience}
 \subsection{Vocational}
 
-\cventry{2010--}{Software Engineer}{Synesis}{Minsk}{}{Middleware for NEC devboard.\newline{}%
+\cventry{2010--}{Software Engineer}{Synesis}{Minsk}{}{HAL for NEC devboard.\newline{}%
 \begin{itemize}%
-\item In-kernel RTP/RTCP media support.
+\item In-kernel \href{http://en.wikipedia.org/wiki/Real-time_Transport_Protocol}{RTP/RTCP} support implementation;
+\item Tests in Python.
 \end{itemize}}
 \newline
 
@@ -79,6 +80,7 @@
 \begin{itemize}%
 \item Porting U-Boot to the devboard;
 \item Porting Linux to the devboard;
+\item MIPS binaries reverse-engineering;
 \item Porting DVB-T software and platform-specific bugfixing;
 \item Minimizing and putting the whole firmware into 8Mb flash device;
 \item CMake build system.
@@ -101,19 +103,19 @@
 \begin{itemize}%
 \item Cross-compiler toolchain;
 \item Providing a way to run and test the software;
-\item Adding Fujitsu board support to middleware.
+\item Adding Fujitsu board (with proprietary RTOS running on it) support to middleware.
 \end{itemize}}
 \newline
 
 \cventry{2008}{Software Engineer}{Synesis}{Minsk}{}{DVB-T set-top box cross-platform software for three different boards.\newline{}%
 \begin{itemize}%
 \item Cross-platform middleware API design and implementation;
-\item TI-DM64446 specific middleware implementation;
+\item TI-DM64446 (with Linux running on it) specific middleware implementation;
 \item Build system.
 \end{itemize}}
 \newline
 
-\cventry{2007--2008}{Software Engineer}{Synesis}{Minsk}{}{DVB-S set-top box (ST7109) software.\newline{}%
+\cventry{2007--2008}{Software Engineer}{Synesis}{Minsk}{}{DVB-S Linux-based set-top box (ST7109) software.\newline{}%
 \begin{itemize}%
 \item Tests in Python;
 \item Extending automatic testing framework;
@@ -122,13 +124,41 @@
 \item Automatic software update functionality and tools.
 \end{itemize}}
 \newline
-
+\\
+\\
 \subsection{Miscellaneous}
-\cventry{2010--}{Sole developer}{}{}{}{QuakeC bytecode to native code library compiler.\newline \small\url{https://github.com/ftrvxmtrx/qc2lib}\newline}
-\cventry{2010--}{Sole developer}{}{}{}{Single cross-platform Quake I/II/III game engine.\newline \small\url{https://github.com/ftrvxmtrx/metaquake}\newline}
+\cventry{2010--}{Sole developer}{}{}{}{Single cross-platform Quake I/II/III game engine.\newline \small\url{https://github.com/ftrvxmtrx/metaquake}\newline{}%
+\begin{itemize}%
+\item Cross-platform;
+\item Nice modular architecture;
+\item Clean and well-documented internal API;
+\item Simplification through the code generation;
+\item A lot of tests.
+\end{itemize}}
+\newline
+
+\cventry{2010--}{Sole developer}{}{}{}{QuakeC bytecode to native code library compiler.\newline \small\url{https://github.com/ftrvxmtrx/qc2lib}\newline{}%
+\begin{itemize}%
+\item \href{http://caml.inria.fr/ocaml/index.en.html}{OCaml};
+\item Well-documented code;
+\item \href{http://llvm.org/}{LLVM} usage in the future.
+\end{itemize}}
+\newline
+
 \cventry{2010}{Sole developer}{}{}{}{Tool for finding unnecessary include directives.\newline \small\url{https://github.com/ftrvxmtrx/inclean}\newline}
-\cventry{2010}{Sole developer}{}{}{}{2D puzzle for Maemo-based Nokia N900.\newline \small\url{http://maemo.org/downloads/product/Maemo5/colorflood}\newline}
-\cventry{2009}{Sole developer}{}{}{}{Flac/Ape/Wavepack + cue sheet into tracks splitter.\newline \small\url{http://split2flac.googlecode.com}\newline}
+\cventry{2010}{Sole developer with few contributions from others}{}{}{}{2D puzzle for Maemo-based Nokia N900.\newline \small\url{http://maemo.org/downloads/product/Maemo5/colorflood}\newline{}%
+\begin{itemize}%
+\item \href{http://qt.nokia.com}{Qt, C++};
+\item CMake build system.
+\end{itemize}}
+\newline
+
+\cventry{2009}{Sole developer with few contributions from others}{}{}{}{Flac/Ape/Wavepack + cue sheet into tracks splitter.\newline \small\url{http://split2flac.googlecode.com}\newline{}%
+\begin{itemize}%
+\item One small (652 LOC) POSIX-compiant shell script to do everything.
+\end{itemize}}
+\newline
+
 \cventry{2009}{Sole developer}{}{}{}{Open-source 2D game engine.\newline \small\url{https://github.com/ftrvxmtrx/erszebet}\newline{}%
 \begin{itemize}%
 \item Lua for game code;
@@ -137,15 +167,24 @@
 \end{itemize}}
 \newline
 
-\cventry{2005--2006}{Sole developer}{}{}{}{Client-side QuakeC implementation for Darkplaces game engine.\newline}
+\cventry{2005--2006}{Sole developer}{}{}{}{Client-side QuakeC implementation for Darkplaces game engine.\newline{}%
+\begin{itemize}%
+\item Heavily used by \small{\href{http://en.wikipedia.org/wiki/Nexuiz}{Nexuiz}.}
+\end{itemize}}
 \newline
-\cventry{2005--2006}{Sole developer}{}{}{}{TomazQuake derived game engine with a lot of additional features.\newline}
+
+\cventry{2005--2006}{Sole developer}{}{}{}{TomazQuake derived game engine.\newline{}%
+\begin{itemize}%
+\item Custom Quake-based network protocol to lower the traffic;
+\item Rendering optimizations for high framerates.
+\end{itemize}}
 \newline
+
 \cventry{2004--2005}{Sole developer, mapper, modeller}{}{}{}{Quake UT-like game mod.\newline}
 
 \section{Interests}
 \cvline{Programming}{\small \url{http://github.com/ftrvxmtrx} \newline \url{http://ohloh.net/accounts/ftrvxmtrx}}
-\cvline{Problems}{\small \url{http://projecteuler.net/profile/ftrvxmtrx.png} \newline \url{http://spoj.pl/users/ftrvxmtrx}}
+\cvline{Problem solving}{\small \url{http://projecteuler.net/profile/ftrvxmtrx.png} \newline \url{http://spoj.pl/users/ftrvxmtrx}}
 \cvline{Photography}{\small \url{http://picasaweb.google.com/ftrvxmtrx}}
 \cvline{Music}{\small \url{http://last.fm/user/i515i}}
 \cvline{Games}{\small Quake I/II/III, UT99, Scrabble, Warcraft II, etc}
