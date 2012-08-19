@@ -2,3 +2,4 @@
 *.out
 *.aux
 *.swp
+.DS_Store
