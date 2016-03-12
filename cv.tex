@@ -1,8 +1,8 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[11pt,a4paperm,sans]{moderncv}
 
 %moderncvthemes are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman'
 % (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[orange]{classic}
+\moderncvtheme[red]{casual}
 
 \usepackage[utf8]{inputenc}
 
@@ -20,18 +20,18 @@
 % personal data
 \firstname{Andrey}
 \familyname{Cherkashin}
-%\title{Resumé title (optional)}
+\title{Software Developer}
 \mobile{+1.805.699.6661}
 %\phone{phone (optional)}
 %\fax{fax (optional)}
-\email{andoriyu@infinityco.de}
+\email{with.out@me.com}
 \homepage{github.com/andoriyu}
 %\photo[64pt]{picture}
 %\quote{22 years old.}
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\renewcommand*{\bibliographyitemlabel}{\biblabel{\arabic{enumiv}}}
 \makeatother
 
 % bibliography with mutiple entries
@@ -45,36 +45,54 @@
 \maketitle
 
 \section{Education}
-\cventry{2007--2009}{B.S.}{Siberian State University of Informatics and Radioelectronics}{Krasnoyarsk, Russia}{\textit{Computer Science and Computing Technology}}{}
-\cventry{2009--2013}{A.A.}{Santa Barbara City College}{Santa Barbara, CA}{\textit{Computer Science}}{}
+\cventry{2007--2011}{B.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis and Managment}}{}
+\cventry{2012--2014}{M.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis in enterprise managment}}{}
 
-\section{Most used development tools}
-\cvcomputer{Languages}{Ruby, Javascript, Perl, Objective-C, C++, C\#}{}{}
-\cvcomputer{Frameworks}{Sinatra, Express.js, Ruby On Rails, Unity3d, Cocos2d, EventMachine, Qt, Cocoa(Touch)}{}{}
-\cvcomputer{Op. systems}{FreeBSD, SmartOS, GNU/Linux}{}{}
-\cvcomputer{Other}{Xen, Amazon Web Services, Riak, Chef, Capistrano, TorqueBox}{}{}
+\section{Technologies}
+\cvline{Languages}{Java, Ruby, Javascript, Perl, Objective C, Erlang, Rust, C\#, Python}
+\cvline{Frameworks}{Spring MVC, Akka, Express.js, Ruby On Rails, Cocos2d, EventMachine, Qt, Cocoa, OTP, React, jQuery, Flask, Mono}
+\cvline{Op.\ systems}{FreeBSD, GNU/Linux, OS X}
+\cvline{Databases}{PostgreSQL, Cassandra, Riak, CouchDB, Redis, ElasticSearch}
+\cvline{Other}{Xen, Amazon Web Services, Vagrant, Salt, Puppet, DTrace, Nginx, \LaTeX{}, bash, zsh}
 
 \section{Languages}
 \cvlanguage{Russian}{Native}{}
 \cvlanguage{English}{Excellent}{}
 
+\section{Relevant Coursework}
+\subsection{Siberian Federal University}
+\cvline{B.S.}{Methods of optimizing staff schedule in retail stores}
+\cvline{M.S.}{Developing customer loyalty program in retail stores}
+
 \section{Experience}
-\subsection{OOO 'KF Sinrah'}
-\cventry{2007--2009}{CTO}{OOO 'KF Sinrah'}{Krasnoyarsk, Russia}{}{IT Consulting and Outsourcing}
+\subsection{KF Sinrah}
+\cventry{2007--2009}{Director of IT}{KF Sinrah}{Krasnoyarsk, Russian Federation}{}{IT Consulting}
+\subsection{Freelance}
+\cventry{2009--2017}{Software Developer}{Freelansim}{}{}{}
 
 \section{Projects}
-\subsection{Objective-C}
-\cventry{2010--}{Razvivaika}{iOS Game}{Russian alphabet game for kids}{}{\href{http:/itunes.apple.com/us/app/id405879674?mt=8}{Link}}{}
+
+\subsection{Vocational}
+\cventry{2011--2012}{RADOS Monitoring}{iOS app}{Mobile interface for mining equipment monitoring service}{}{}{}
 \cvline{}{Objective-C, CocoaTouch, DTrace}
-\subsection{Ruby}
-\cventry{2012}{SibRados}{Web Site}{\href{http://sibrados.com}{Link}}{}{}{}{}
-\cvline{}{Ruby on Rails}
-\cventry{2011--2012}{Avral.pro}{E-Commerce app}{\href{http://avral.pro}{Link}}{}{}{}
+
+\cventry{2011--2015}{Sibrados}{Managment and analytics system for mining equipment}{}{}{}{}{}
+\cvline{}{\small Erlang, Riak, Postgres, Java, embeded C}
+
+\cventry{2011--2012}{Avral.pro}{E-Commerce Website}{http://avral.pro}{}{}{}
 \cvline{}{Sinatra, CouchDB, ElasticSearch}
 
-\section{Personal information}
-\cvline{Age}{22}
-\cvline{Marital status}{single}
-\cvline{Kids}{no}
+\subsection{Miscellaneous}
+
+\cventry{2010--2011}{Razvivaika}{iOS Game}{Russian alphabet game for kids}{}{http:/itunes.apple.com/us/app/id405879674?mt=8}{}
+\cvline{}{\small Objective-C, CocoaTouch, DTrace}
+
+\cventry{2012}{SibRados}{Corporate Website}{http://sibrados.com}{}{}{}{}
+\cvline{}{Ruby on Rails}
+
+%\section{Personal information}
+%\cvline{Age}{26}
+%\cvline{Marital status}{single}
+%\cvline{Kids}{no}
 
 \end{document}
