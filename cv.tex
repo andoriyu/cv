@@ -1,5 +1,15 @@
 \documentclass[11pt,a4paperm,sans]{moderncv}
 
+% Age calc
+\newcounter{Age}
+\newcommand{\WhichAge}[3]{\setcounter{Age}{\numexpr(\month-#2)*100+\day-#3}%
+   \ifnum\value{Age}<0%
+      \setcounter{Age}{\numexpr\year-#1-1}%
+   \else%
+      \setcounter{Age}{\numexpr\year-#1}%
+   \fi%
+   \theAge}
+
 %moderncvthemes are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman'
 % (for roman fonts, instead of sans serif fonts)
 \moderncvtheme[red]{casual}
@@ -20,14 +30,14 @@
 % personal data
 \firstname{Andrey}
 \familyname{Cherkashin}
-\title{Software Developer}
+\title{Software Engineer}
 \mobile{+1.805.699.6661}
 %\phone{phone (optional)}
 %\fax{fax (optional)}
 \email{with.out@me.com}
 \homepage{github.com/andoriyu}
 %\photo[64pt]{picture}
-%\quote{22 years old.}
+%\quote{\WhichAge{1989}{11}{11} years old.}
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
@@ -47,13 +57,14 @@
 \section{Education}
 \cventry{2007--2011}{B.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis and Managment}}{}
 \cventry{2012--2014}{M.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis in enterprise managment}}{}
+\cventry{2009-2011}{English Classes}{Santa Barbara City College}{Santa Barbara, CA}{}{}
 
 \section{Technologies}
-\cvline{Languages}{Java, Ruby, Javascript, Perl, Objective C, Erlang, Rust, C\#, Python}
-\cvline{Frameworks}{Spring MVC, Akka, Express.js, Ruby On Rails, Cocos2d, EventMachine, Qt, Cocoa, OTP, React, jQuery, Flask, Mono}
-\cvline{Op.\ systems}{FreeBSD, GNU/Linux, OS X}
-\cvline{Databases}{PostgreSQL, Cassandra, Riak, CouchDB, Redis, ElasticSearch}
-\cvline{Other}{Xen, Amazon Web Services, Vagrant, Salt, Puppet, DTrace, Nginx, \LaTeX{}, bash, zsh}
+\cvline{Languages}{Java, Ruby, Javascript, Objective C, Elexir, Rust, Kotlin, Python}
+\cvline{Frameworks}{Spring MVC, Akka, Ruby On Rails, Cocoa, OTP, React Native}
+\cvline{Op.\ systems}{FreeBSD, GNU/Linux, macOS}
+\cvline{Databases}{PostgreSQL, Cassandra, Riak, CouchDB, Redis, ElasticSearch, lmdb}
+\cvline{Other}{Xen, Amazon Web Services, Docker, Salt, DTrace, Nginx, \LaTeX{}, bash, zsh}
 
 \section{Languages}
 \cvlanguage{Russian}{Native}{}
@@ -73,7 +84,9 @@
 \section{Projects}
 
 \subsection{Vocational}
-\cventry{2012--2015}{RADOS Monitoring}{iOS app}{Mobile interface for mining equipment monitoring service}{}{}{Development of mobile dashboard and administrative interface for iOS devices.\newline{}
+\cventry{2012--2015}{RADOS Monitoring}{iOS app}{Mobile interface for mining equipment monitoring service}{}{}{}
+\cvline{}{Development of mobile dashboard and administrative interface for iOS devices.}
+\cvline{}{
   \begin{itemize}
     \item Technologies used:
       \begin{itemize}
@@ -82,7 +95,9 @@
   \end{itemize}
 }
 
-\cventry{2011--2015}{Sibrados}{Managment and analytics system for mining equipment}{}{}{}{}{Development of complex monitoring solution for minning equipment. \newline{}
+\cventry{2011--2015}{Sibrados}{Managment and analytics system for mining equipment}{}{}{}{}{}
+\cvline{}{Development of complex monitoring solution for minning equipment.}
+\cvline{}{
   \begin{itemize}
     \item Resposibilties:
       \begin{itemize}
@@ -101,13 +116,15 @@
   \end{itemize}
 }
 
-\cventry{2010--2011}{Avral.pro}{E-Commerce Website}{http://avral.pro}{}{}{Development of e-commerce solution for retailer of home improvement and construction product. \newline{}
+\cventry{2010--2011}{Avral.pro}{E-Commerce Website}{http://avral.pro}{}{}{}
+\cvline{}{Develop e-commerce solution for retailer of home improvement and construction products.}
+\cvline{}{
   \begin{itemize}
     \item Resposibilties:
       \begin{itemize}
         \item Design and implement engine for e-commerce application
         \item Deploy application into AWS Elastic Beanstalk
-        \item Implement data synchronization between application and 1C\: Enterprise
+        \item Implement data synchronization between application and inventory managment system
       \end{itemize}
     \item Technologies used:
       \begin{itemize}
@@ -115,11 +132,10 @@
       \end{itemize}
   \end{itemize}
 }
-
 \subsection{Miscellaneous}
 
-\cventry{2010--2011}{Razvivaika}{iOS Game}{Russian alphabet game for kids}{}{http:/itunes.apple.com/us/app/id405879674?mt=8}{\newline{}
-  \begin{itemize}
+\cventry{2010--2011}{Razvivaika}{iOS Game}{Russian alphabet game for kids}{}{http:/itunes.apple.com/us/app/id405879674?mt=8}{}
+  \cvline{}{\begin{itemize}
     \item Technologies used:
       \begin{itemize}
         \item Objective-C, CocoaTouch, DTrace
