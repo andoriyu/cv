@@ -31,10 +31,10 @@
 \firstname{Andrey}
 \familyname{Cherkashin}
 \title{Software Engineer}
-\mobile{+1.805.699.6661}
+\mobile{+1.805.280.9169}
 %\phone{phone (optional)}
 %\fax{fax (optional)}
-\email{with.out@me.com}
+\email{andoriyu@gmail.com}
 \homepage{github.com/andoriyu}
 %\photo[64pt]{picture}
 %\quote{\WhichAge{1989}{11}{11} years old.}
@@ -55,16 +55,17 @@
 \maketitle
 
 \section{Education}
-\cventry{2007--2011}{B.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis and Managment}}{}
-\cventry{2012--2014}{M.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis in enterprise managment}}{}
+\cventry{2007--2011}{B.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis, and Management}}{}
+\cventry{2012--2014}{M.S.}{Siberian Federal University}{Krasnoyarsk, Russian Federation}{\textit{System Analysis in Enterprise Management}}{}
 \cventry{2009-2011}{English Classes}{Santa Barbara City College}{Santa Barbara, CA}{}{}
 
 \section{Technologies}
-\cvline{Languages}{Java, Ruby, Javascript, Objective C, Elexir, Rust, Kotlin, Python}
-\cvline{Frameworks}{Spring MVC, Akka, Ruby On Rails, Cocoa, OTP, React Native}
+\cvline{Languages}{Java, Ruby, Javascript, Objective C, Rust, Kotlin, Python}
+\cvline{Frameworks}{Spring MVC, Akka, Ruby On Rails, Cocoa, OTP, React (Native)}
 \cvline{Op.\ systems}{FreeBSD, GNU/Linux, macOS}
-\cvline{Databases}{PostgreSQL, Cassandra, Riak, CouchDB, Redis, ElasticSearch, lmdb}
-\cvline{Other}{Xen, Amazon Web Services, Docker, Salt, DTrace, Nginx, \LaTeX{}, bash, zsh}
+\cvline{Databases}{PostgreSQL, Cassandra, MySQL, CouchDB, ElasticSearch}
+\cvline{Cloud}{Amazon Web Services, Kubernetes, Docker, Google Cloud Platform}
+\cvline{Other}{Salt, Nginx, \LaTeX{}, zsh}
 
 \section{Languages}
 \cvlanguage{Russian}{Native}{}
@@ -76,6 +77,53 @@
 \cvline{M.S.}{Developing customer loyalty program in retail stores}
 
 \section{Experience}
+\subsection{FabFitFun Inc}
+\cventry{2018--current}{Senior Engineer}{FabFitFun Inc.}{Los Angeles, CA}{}{}
+\cvline{}{
+  \begin{itemize}
+    \item Responsibilities and Achievements:
+      \begin{itemize}
+        \item Refactored local development environment with docker. (Make, Docker)
+        \item Refactored test suits to work with docker and Circle CI. (Docker)
+        \item Implemented pipeline to generate seed data for local development environment. (Docker, MySQL, sh, Make)
+        \item Bi-weekly security audit. (PHP, MySQL, AWS, Linux)
+        \item Managing custom IAM roles and policies. (AWS)
+      \end{itemize}
+    \item Technologies used: MySQL, Amazon Web Services, Docker.
+  \end{itemize}
+}
+\subsection{Flipagram}
+\cventry{2013--2018}{Senior Backend Engineer}{Flipagram}{Los Angeles, CA}{}{}
+\cvline{}{
+  \begin{itemize}
+    \item Responsibilities and Achievements:
+      \begin{itemize}
+        \item Development of internal administrative tools for social network. (Java, Ruby, PostgreSQL)
+        \item Supporting mobile client teams by implementing features on backend. (Java, PostgreSQL)
+        \item Worked in team in charge of internal music catalog infrastructure. (Java, PostgreSQL, Scala)
+        \item Administrative interface to internal music catalog. (Ruby, Java)
+        \item Engineered ingestion pipeline for internal music catalog with support for multiple content providers. (Spring Batch, Spark)
+        \item Engineered content policy engine to be complaint with music licenses. (Java, ZooKeeper)
+      \end{itemize}
+    \item Technologies used: Spring MVC, Ruby on Rails, Cassandra, Amazon Web Services, Docker
+    \item Worked on: Platform Backend, Internal Admin Tools, Content Moderation System, Music Platform Backend
+    \item Other Responsibilities: Running daily standups
+  \end{itemize}
+}
+\subsection{Cheerful Inc.}
+\cventry{2012--2013}{Full Stack Engineer}{Cheerful Inc.}{Culver City, CA}{}{}
+\cvline{}{
+  \begin{itemize}
+    \item Technologies used: Spring MVC, Python, CocoaTouch, Amazon Web Services
+    \item Worked on: Front end, Internal Admin Tools, iOS application
+    \item Responsibilities:
+      \begin{itemize}
+        \item Development of internal administrative tools for social network. (Python, Java, MongoDB)
+        \item Turning PSDs into actual web pages. (Python, Javascript)
+        \item Making front-end work in all browsers (even Internet Explorer 7) (Javascript)
+      \end{itemize}
+  \end{itemize}
+}
 \subsection{KF Sinrah}
 \cventry{2007--2009}{Director of IT}{KF Sinrah}{Krasnoyarsk, Russian Federation}{}{IT Consulting}
 \subsection{Freelance}
@@ -84,61 +132,50 @@
 \section{Projects}
 
 \subsection{Vocational}
-\cventry{2012--2015}{RADOS Monitoring}{iOS app}{Mobile interface for mining equipment monitoring service}{}{}{}
+\cventry{2012--2013}{RADOS Monitoring}{iOS application}{Mobile interface for mining equipment monitoring service}{}{}{}
 \cvline{}{Development of mobile dashboard and administrative interface for iOS devices.}
+\cventry{2011--2013}{Sibrados}{Management, and analytics system for mining equipment}{}{}{}{}{}
+\cvline{}{Development of complex monitoring solution for mining equipment.}
 \cvline{}{
   \begin{itemize}
-    \item Technologies used:
+    \item Responsibilities:
       \begin{itemize}
-        \item Objective-C, CocoaTouch, DTrace
-      \end{itemize}
-  \end{itemize}
-}
-
-\cventry{2011--2015}{Sibrados}{Managment and analytics system for mining equipment}{}{}{}{}{}
-\cvline{}{Development of complex monitoring solution for minning equipment.}
-\cvline{}{
-  \begin{itemize}
-    \item Resposibilties:
-      \begin{itemize}
-        \item Setup up local network infrastructure and servers
-        \item Oversee development of embeded monitor nodes
-        \item Design and implement field data collection system
-        \item Deploy field data collection system
-        \item Monitor health status of collection system
+        \item Setup up local network infrastructure and servers. (Chef, FreeBSD, IPSec)
+        \item Oversee development of embedded monitor nodes. (C, FreeBSD)
+        \item Design and implement field data collection system. (C, Erlang)
       \end{itemize}
     \item Technologies used:
       \begin{itemize}
-        \item Backend: Spring MVC, Riak, PostgreSQL, Java, ElasticSearch, RabbitMQ
-        \item Monitoring node: Embeded C, Erlang (field data collector)
+        \item Backend: Spring MVC, Riak, PostgreSQL, Java, ElasticSearch, RabbitMQ, DTrace
+        \item Monitoring node: Embedded C, Erlang (field data collector)
         \item Administrative interface and dashboard: Ruby on Rails, Backbone.js, D3.js
       \end{itemize}
   \end{itemize}
 }
 
+\subsection{Miscellaneous}
 \cventry{2010--2011}{Avral.pro}{E-Commerce Website}{http://avral.pro}{}{}{}
-\cvline{}{Develop e-commerce solution for retailer of home improvement and construction products.}
+\cvline{}{Develop e-commerce solution for the retailer of home improvement and construction products.}
 \cvline{}{
   \begin{itemize}
-    \item Resposibilties:
+    \item Responsibilities:
       \begin{itemize}
         \item Design and implement engine for e-commerce application
-        \item Deploy application into AWS Elastic Beanstalk
-        \item Implement data synchronization between application and inventory managment system
+        \item Deployment and maintaining application on Heroku
+        \item Implement data synchronization between application and inventory management system
       \end{itemize}
     \item Technologies used:
       \begin{itemize}
-        \item Ruby on Rails, CouchDB, Redis, ElasticSearch, AWS Beasntalk, AWS EC2
+        \item Ruby on Rails, CouchDB, Redis, ElasticSearch, Heroku
       \end{itemize}
   \end{itemize}
 }
-\subsection{Miscellaneous}
 
 \cventry{2010--2011}{Razvivaika}{iOS Game}{Russian alphabet game for kids}{}{http:/itunes.apple.com/us/app/id405879674?mt=8}{}
   \cvline{}{\begin{itemize}
     \item Technologies used:
       \begin{itemize}
-        \item Objective-C, CocoaTouch, DTrace
+        \item Objective-C, CocoaTouch
       \end{itemize}
   \end{itemize}
 }
