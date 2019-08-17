@@ -65,7 +65,7 @@
 \cvline{Op.\ systems}{FreeBSD, GNU/Linux, macOS}
 \cvline{Databases}{PostgreSQL, Cassandra, MySQL, CouchDB, ElasticSearch}
 \cvline{Cloud}{Amazon Web Services, Kubernetes, Docker, Google Cloud Platform}
-\cvline{Other}{Salt, Nginx, \LaTeX{}, zsh}
+\cvline{Other}{Salt, Nginx, \LaTeX{}, ZSH}
 
 \section{Languages}
 \cvlanguage{Russian}{Native}{}
@@ -75,6 +75,37 @@
 \subsection{Siberian Federal University}
 \cvline{B.S.}{Methods of optimizing staff schedule in retail stores}
 \cvline{M.S.}{Developing customer loyalty program in retail stores}
+
+\section{Open Source}
+\subsection{FreeBSD}
+\cvline{}{
+  \begin{itemize}
+    \item Port maintainer:
+      \begin{itemize}
+        \item Various JetBrains IDEs
+        \item Various sysutils written in rust
+        \item Maintaning stable and nightly builds of Rust
+      \end{itemize}
+  \end{itemize}
+}
+\subsection{Rust}
+\cvline{}{
+  \begin{itemize}
+    \item Maintained stage0 of rustc until automatic builds were implemented
+    \item Hoop
+      \begin{itemize}
+        \item Fast ring buffer
+      \end{itemize}
+    \item libZetta
+      \begin{itemize}
+        \item Safe Rust interface to ZFS administrative tools
+      \end{itemize}
+    \item cargo-suity
+      \begin{itemize}
+        \item CI friendly JUnit reporter for cargo
+      \end{itemize}
+  \end{itemize}
+}
 
 \section{Experience}
 \subsection{FabFitFun Inc}
@@ -86,10 +117,11 @@
         \item Refactored local development environment with docker. (Make, Docker)
         \item Refactored test suits to work with docker and Circle CI. (Docker)
         \item Implemented pipeline to generate seed data for local development environment. (Docker, MySQL, sh, Make)
-        \item Bi-weekly security audit. (PHP, MySQL, AWS, Linux)
         \item Managing custom IAM roles and policies. (AWS)
+        \item Responsible for CI/CD pipeline development and maintenance. (Jenkins, Kubernetes, Argo)
+        \item Implemented "infrastructure as a code" for all environments. (Terraform, Vault)
       \end{itemize}
-    \item Technologies used: MySQL, Amazon Web Services, Docker.
+    \item Technologies used: MySQL, Amazon Web Services, Kubernetes, Jenkins, Terraform.
   \end{itemize}
 }
 \subsection{Flipagram}
@@ -100,10 +132,10 @@
       \begin{itemize}
         \item Development of internal administrative tools for social network. (Java, Ruby, PostgreSQL)
         \item Supporting mobile client teams by implementing features on backend. (Java, PostgreSQL)
-        \item Worked in team in charge of internal music catalog infrastructure. (Java, PostgreSQL, Scala)
+        \item Reposible for internal music catalog infrastructure development and maintenance. (Java, PostgreSQL, Spark)
         \item Administrative interface to internal music catalog. (Ruby, Java)
         \item Engineered ingestion pipeline for internal music catalog with support for multiple content providers. (Spring Batch, Spark)
-        \item Engineered content policy engine to be complaint with music licenses. (Java, ZooKeeper)
+        \item Engineered content policy engine to be compliant with music licenses. (Java, ZooKeeper)
       \end{itemize}
     \item Technologies used: Spring MVC, Ruby on Rails, Cassandra, Amazon Web Services, Docker
     \item Worked on: Platform Backend, Internal Admin Tools, Content Moderation System, Music Platform Backend
@@ -132,7 +164,7 @@
 \section{Projects}
 
 \subsection{Vocational}
-\cventry{2012--2013}{RADOS Monitoring}{iOS application}{Mobile interface for mining equipment monitoring service}{}{}{}
+\cventry{2012--2013}{RADOS Monitoring}{iOS application}{Tablet application for mining equipment monitoring service}{}{}{}
 \cvline{}{Development of mobile dashboard and administrative interface for iOS devices.}
 \cventry{2011--2013}{Sibrados}{Management, and analytics system for mining equipment}{}{}{}{}{}
 \cvline{}{Development of complex monitoring solution for mining equipment.}
@@ -149,24 +181,6 @@
         \item Backend: Spring MVC, Riak, PostgreSQL, Java, ElasticSearch, RabbitMQ, DTrace
         \item Monitoring node: Embedded C, Erlang (field data collector)
         \item Administrative interface and dashboard: Ruby on Rails, Backbone.js, D3.js
-      \end{itemize}
-  \end{itemize}
-}
-
-\subsection{Miscellaneous}
-\cventry{2010--2011}{Avral.pro}{E-Commerce Website}{http://avral.pro}{}{}{}
-\cvline{}{Develop e-commerce solution for the retailer of home improvement and construction products.}
-\cvline{}{
-  \begin{itemize}
-    \item Responsibilities:
-      \begin{itemize}
-        \item Design and implement engine for e-commerce application
-        \item Deployment and maintaining application on Heroku
-        \item Implement data synchronization between application and inventory management system
-      \end{itemize}
-    \item Technologies used:
-      \begin{itemize}
-        \item Ruby on Rails, CouchDB, Redis, ElasticSearch, Heroku
       \end{itemize}
   \end{itemize}
 }
